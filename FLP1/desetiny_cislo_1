@@ -1,0 +1,6 @@
+4 REMark desetiny_cislo_1
+10 CLS #2
+100 LET days = 24
+110 LET sales = 3649.84
+120 LET sales_per_day = sales/days
+130 PRINT sales_per_day

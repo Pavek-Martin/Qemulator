@@ -1,0 +1,8 @@
+5 REMark porovnani_1
+7 CLS
+10 IF "cat"<"dog" THEN PRINT '"cat"<"dog"'
+20 IF "dog">"cat" THEN PRINT '"dog">"cat"'
+30 IF "alf"<"ben" THEN PRINT '"alf"<"ben"'
+40 IF "kit">"ben" THEN PRINT '"kit">"ben"'
+50 IF "pat"<>"pet" THEN PRINT '"pat"<>"pet"'
+51 REMark je ruzne

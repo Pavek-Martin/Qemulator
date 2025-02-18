@@ -1,0 +1,14 @@
+5 REMark scroll_1
+7 CLS
+10 INK 5
+20 FILL 1
+25 REMark vylpni krun na cian barvu
+30 CIRCLE 50,50,30
+35 LET p=20
+37 PAUSE p
+100 FOR a = 1 TO 5
+110 SCROLL 10
+120 PAUSE p
+130 SCROLL -10
+140 PAUSE p
+150 NEXT a

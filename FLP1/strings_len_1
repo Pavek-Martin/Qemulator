@@ -1,0 +1,6 @@
+5 REMark strings_len_1
+7 PAPER 1 : INK 7 : BORDER 0,0 : CLS
+10 LET a$="abcdef"
+20 PRINT "a$ = ";'"';a$;'"'
+30 d_a = LEN(a$)
+40 PRINT "delka a$ je ";d_a;" znaku"

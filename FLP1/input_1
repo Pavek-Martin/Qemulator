@@ -1,0 +1,9 @@
+5 REMark input_1
+7 CLS
+80 INPUT "zadej a: ";a$
+85 PRINT "a=";a$
+90 INPUT "zadej b: ";b$
+95 PRINT "b=";b$
+110 IF a$ < b$ THEN PRINT "a < b"
+120 IF a$ = b$ THEN PRINT "a = b"
+130 IF a$ > b$ THEN PRINT "a > b"
