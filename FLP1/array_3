@@ -1,0 +1,17 @@
+5 REMark array_3
+6 CLS
+7 LET max=3
+10 DIM a$(max,max)
+60 FOR aa = 1 TO max
+70 FOR bb = 1 TO max
+77 x=RND(999)
+78 PRINT x
+80 LET a$(aa,bb)=x
+90 NEXT bb
+99 NEXT aa
+100 PRINT ""
+110 FOR cc = 1 TO max
+120 FOR dd = 1 TO max
+140 PRINT "a$(";cc;",";dd;")=";a$(cc,dd)
+150 NEXT dd
+160 NEXT cc

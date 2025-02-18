@@ -1,0 +1,5 @@
+5 REMark print_1
+7 CLS
+100 PRINT 1,2,3
+200 PRINT 1!2!3!
+300 PRINT \1\2\3

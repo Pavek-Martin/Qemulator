@@ -1,0 +1,26 @@
+5 REMark MagicSnake_1
+110 PAPER 0 : CLS
+120 LET across = 50
+125 LET up = 50
+130 REPeat snake
+140 LET direction=RND(1 TO 4)
+145 LET color=RND(2 TO 7)
+150 LET growth=RND(2 TO 20)
+160 INK color
+170 FOR unit = 1 TO growth
+180 SELect ON direction
+190 ON direction = 1
+200 LET up = up + 1
+210 ON direction = 2
+220 LET across = across + 1
+230 ON direction = 3
+240 LET up = up - 1
+250 ON direction = 4
+260 LET across = across - 1
+270 END SELect 
+271 REMark ^^^ asi jako SWITCH
+280 IF across<1 OR across>99 OR up<1 OR up>99 THEN EXIT snake
+290 POINT across,up
+300 END FOR unit
+310 END REPeat snake
+320 PRINT "Snake off edge"

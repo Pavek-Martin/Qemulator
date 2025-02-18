@@ -1,0 +1,8 @@
+5 REMark if_1
+15 CLS
+25 REPeat loop
+35 latter_code = RND(65 TO 90)
+45 LET latter$ = CHR$(latter_code)
+55 PRINT latter$
+65 IF latter$ ='Z' THEN EXIT loop
+75 END REPeat loop

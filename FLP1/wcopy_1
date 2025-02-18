@@ -1,0 +1,7 @@
+5 REMark wcopy_1
+20 FileName$="wcopy_1"
+30 Jednotka1$="flp1_"
+40 Jednotka2$="flp2_"
+100 SAVE Jednotka1$ & FileName$
+200 COPY Jednotka1$ & FileName$ TO Jednotka2$ & FileName$
+300 WCOPY Jednotka1$ TO Jednotka2$

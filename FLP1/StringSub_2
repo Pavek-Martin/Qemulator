@@ -1,0 +1,7 @@
+5 REMark StringSub_2
+7 CLS
+100 LET subject$="ENGLISH MATHS COMPUTING"
+105 PRINT subject$
+110 LET student$ = "           "
+120 LET student$(9 TO 13) = subject$(9 TO 13)
+130 PRINT student$

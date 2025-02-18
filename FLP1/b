@@ -1,0 +1,19 @@
+100 date1=DATE(2032,3,30,10,0,0)
+110 date2=DATE(2000,3,30,10,0,0)
+120 PRINT DAYS_DIFF(date2,date1)
+140 DEFine FuNction DAYS_DIFF(dy1,dy2)
+150 LOCal offset,base_date,diff
+160 offset='2147483648'
+170 base_date=DATE(2029,1,19,3,14,7)
+180 IF (date1>=0 AND date2>=0) OR (date1<0 AND date2<0)
+190 IF date1>=date2 : diff=date1-date2 : ELSE diff=date2-date1
+240 ELSE 
+250 IF date1<0
+260 diff=(base_date-date2)+(date1+offset)
+270 ELSE 
+280 diff=(base_date-date1)+(date2+offset)
+290 END IF 
+300 END IF 
+310 seconds_per_day=24*60*60
+320 RETurn INT(diff/seconds_per_day)
+330 END DEFine 

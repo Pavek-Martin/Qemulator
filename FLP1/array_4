@@ -1,0 +1,10 @@
+5 REMark array_4
+50 RESTORE 140
+51 REMark ^ bez tohohle to nefunguje
+60 CLS
+100 DIM pole(5)
+110 FOR bunka = 1 TO 5
+111 READ pole(bunka)
+112 PRINT "pole(";bunka;")=";bunka
+115 END FOR bunka
+140 DATA 50,37,86,41,32

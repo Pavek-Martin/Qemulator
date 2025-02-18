@@ -1,0 +1,3 @@
+20 FOR a = 1 TO 99
+30 PRINT a
+40 NEXT a

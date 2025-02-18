@@ -1,0 +1,9 @@
+5 REMark OpenWriteFile_1
+7 CLS
+110 OPEN_NEW #7, flp1_test
+120 FOR cislo = 1 TO 100
+125 PRINT cislo
+130 PRINT #7, cislo
+140 END FOR cislo
+150 CLOSE #7
+160 PRINT "hotovo"

@@ -1,0 +1,8 @@
+90 REMark data_1
+95 CLS
+100 RESTORE 140 : CLS
+110 DIM high_st$(4,3)
+112 REMark 4=pocet prvku a 3=max. delka jednoho prvku !!!
+120 FOR number = 1 TO 4 : READ high_st$(number)
+130 FOR number = 1 TO 4 : PRINT ! high_st$(number) !
+140 DATA "val", "hal", "mel", "del"

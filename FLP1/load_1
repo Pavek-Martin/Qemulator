@@ -1,0 +1,8 @@
+5 REMark laod_1
+10 jednotka$="flp1_"
+15 CLS
+20 soubor$="paper_1"
+30 nahraj$=jednotka$ & soubor$
+40 PRINT nahraj$
+50 LRUN nahraj$
+60 REMark lrun = load a run dohromady

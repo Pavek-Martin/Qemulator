@@ -1,0 +1,5 @@
+5 REMark paper_1
+10 FOR p = 0 TO 15
+15 PAPER p
+20 PRINT "paper = ";p
+30 NEXT p

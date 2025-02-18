@@ -1,0 +1,36 @@
+5 REMark MagicSnake_2
+100 PAPER 0
+110 BORDER 1,7
+120 CLS
+125 LET up = 50
+127 LET kroku=0
+130 REPeat snake
+140 LET direction=RND(1 TO 4)
+145 LET color=RND(2 TO 7)
+150 LET growth=RND(2 TO 20)
+160 INK color
+170 FOR unit = 1 TO growth
+180 SELect ON direction
+190 ON direction = 1
+200 LET up = up + 1
+210 ON direction = 2
+220 LET across = across + 1
+230 ON direction = 3
+240 LET up = up - 1
+250 ON direction = 4
+260 LET across = across - 1
+270 END SELect 
+271 REMark ^^^ asi jako SWITCH
+280 REMark IF across<1 OR across>99 OR up<1 OR up>99 THEN EXIT snake
+281 IF across<1 THEN across=99
+282 IF across>99 THEN across=1
+283 IF up<1 THEN up=99
+284 IF up>99 THEN up=1
+290 POINT across,up
+294 LET kroku=kroku+1
+295 REMark kroku++
+300 END FOR unit
+310 END REPeat snake
+320 PRINT "zde"
+500 PRINT kroku
+510 REMark ctrl+c = break a pak goto 500

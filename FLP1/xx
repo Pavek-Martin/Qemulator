@@ -1,0 +1,14 @@
+5 REMark pi_1
+10 CLS
+20 p=1
+30 FOR a=1 TO 20
+40 LET c=1
+50 LET j=1
+60 FOR i=1 TO a
+70 LET c=c*i
+80 LET j=j*(2*i+1)
+90 NEXT i
+100 LET p=p+c/j
+110 NEXT a
+120 LET p=p*2
+130 PRINT "pi=";p

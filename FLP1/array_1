@@ -1,0 +1,8 @@
+5 REMark array_1
+6 CLS
+10 DIM a$(4,3)
+20 LET a$(1)="A"
+30 LET a$(2)="B"
+40 LET a$(3)="C"
+50 LET a$(4)="d"
+60 PRINT a$(1)

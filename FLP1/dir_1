@@ -1,0 +1,6 @@
+5 REMark 
+10 DIR flp1_
+20 DIR flp1_w_
+30 j$="flp1_"
+35 hvezdicka$="_"
+40 DIR j$ & CHR$(87) & hvezdicka$

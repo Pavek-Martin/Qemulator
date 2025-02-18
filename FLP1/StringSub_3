@@ -1,0 +1,11 @@
+5 REMark StringSub_3
+10 CLS
+100 LET mark$="625671"
+105 PRINT mark$
+110 LET hist$= mark$(3 TO 4)
+115 PRINT hist$
+120 LET num = 1.125 * hist$
+125 PRINT num
+130 LET mark$(3 TO 4) = num
+140 PRINT mark$
+150 CLS #0

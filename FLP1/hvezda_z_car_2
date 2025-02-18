@@ -1,0 +1,11 @@
+5 REMark  hvezda_z_car_2
+6 CLS
+10 PAPER 6
+12 CLS
+20 BORDER 1,2
+30 REPeat star
+40 LET color = RND(6)
+50 IF color = 6 THEN EXIT star
+60 INK color
+70 LINE 50,60 TO RND(100), RND(100)
+80 END REPeat star

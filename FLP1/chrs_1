@@ -1,0 +1,9 @@
+5 REMark chrs_1
+10 CLS
+15 FOR aa = 1 TO 20
+18 REMark 20 raku ma obrazovka na vysku
+20 LET x=RND(65 TO 90)
+21 REMark a=65; z=90
+22 PRINT "chr$(";x;") = ";a$
+30 a$=CHR$(x)
+40 NEXT aa

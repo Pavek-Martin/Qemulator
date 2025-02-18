@@ -1,0 +1,13 @@
+5 REMark block_2
+10 PAPER 7
+20 CLS
+90 square 5,40,10,100,1
+100 square 4,50,20,90,2
+102 square 3,60,30,80,3
+104 square 2,70,40,70,4
+105 square 1,80,50,60,5
+107 square 0,90,60,50,6
+110 PRINT "end"
+140 DEFine PROCedure square(colour,side,across,down,backgrouns)
+150 BLOCK side,side,across,down,colour
+160 END DEFine 

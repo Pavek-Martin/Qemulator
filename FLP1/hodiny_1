@@ -1,0 +1,21 @@
+5 REMark hodiny_1
+10 den_v_tydnu$=DAY$
+15 PRINT"-----"
+20 PRINT den_v_tydnu$
+50 datum$=DATE$
+60 PRINT datum$
+70 rok$=datum$( 1 TO 4)
+80 PRINT rok$
+90 mesic$=datum$( 6 TO 8)
+100 PRINT mesic$
+110 den$=datum$(10 TO 11)
+120 PRINT den$
+130 hodina$=datum$(13 TO 14)
+140 PRINT hodina$
+150 minuta$=datum$(16 TO 17)
+160 PRINT minuta$
+170 vterina$=datum$(19 TO 20)
+180 PRINT vterina$
+500 IF den_v_tydnu$="Mon" THEN den_v_tydnu_cz$="Pondeli"
+510 IF den_v_tydnu$="Mon" THEN den_v_tydnu_cz$="Utery"
+999 PRINT den_v_tydnu_cz$

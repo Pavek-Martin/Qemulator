@@ -1,0 +1,21 @@
+5 REMark hodiny_2
+7 REMark CLS
+10 wd$=DAY$
+20 cz_den=(wd$ INSTR "..SunMonTueWedThuFriSat")/3
+25 DIM cz_den$(7,7) : RESTORE 40
+30 FOR dd=1 TO 7 : READ cz_den$(dd)
+40 DATA "Nedele","Pondeli","Utery","streda"
+45 DATA "Ctvrtek","Patek","Sobota"
+60 REMark PRINT wd$;" ";cz_den$(cz_den)
+100 D$=DATE$
+105 hodina=D$(13 TO 14) : minuta=D$( 16 TO 17) : vterina=D$(19 TO 21)
+110 year=D$(1 TO 4) : day=D$(10 TO 12): D$=D$(6 TO 8)
+120 month=(D$ INSTR "..JanFebMarAprMayJunJulAugSepOctNovDec")/3
+130 DIM month$(12,9) : RESTORE 150
+140 FOR m=1 TO 12 : READ month$(m)
+150 DATA "Leden","Unor","Brezen","Duben","Kveten","Cerven","Cervenec"
+160 DATA "Srpen","Zari","Rijen","listopad","Prosinec"
+180 REMark PRINT month$(month) & " " & day & ", " & year
+185 REMark PRINT day & " " & month$(month) & " " & year
+190 REMark PRINT cz_den$(cz_den);" ";day & " " & month$(month) & " " & year
+195 PRINT cz_den$(cz_den);" ";day;" ";month$(month);" ";year;" ";hodina;":";minuta;":";vterina

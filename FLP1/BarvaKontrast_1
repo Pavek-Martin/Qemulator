@@ -1,0 +1,12 @@
+5 REMark BarvaKontrast_1
+6 MODE 8
+7 INK 0
+8 CLS
+110 FOR barva = 1 TO 7 STEP 2
+120 PAPER barva : CLS
+140 FOR kontrast = 0 TO 7 STEP 2
+155 BLOCK 100,100,50,50,barva,kontrast
+158 PRINT "barva=";barva;" kontrast=";kontrast
+160 PAUSE 50
+170 END FOR kontrast
+180 END FOR barva

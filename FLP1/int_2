@@ -1,0 +1,4 @@
+50 REMark int_2
+60 CLS
+100 INPUT "zadej cele cislo :";c
+120 PRINT INT(c + .5)

@@ -1,0 +1,19 @@
+5 REMark 2DimPole_2
+100 RESTORE 240
+105 CLS
+110 DIM flat$(2,9,8)
+120 FOR floor = 0 TO 2
+130 FOR num = 0 TO 9
+140 READ flat$(floor,num)
+150 END FOR num
+160 END FOR floor
+170 REMark end of input
+180 FOR floor_2 = 0 TO 2
+200 FOR num_2 = 0 TO 9
+212 PRINT "pole(";floor_2;",";num_2;')="';flat$(floor_2,num_2);'"'
+220 END FOR num_2
+225 PRINT "pause..." : PAUSE
+230 END FOR floor_2
+240 DATA "a","b","c","d","e","f","g","h","i","j"
+250 DATA "k","l","m","m","o","p","q","r","s","t"
+260 DATA "u","v","w","x","y","z","1","2","3","4"
