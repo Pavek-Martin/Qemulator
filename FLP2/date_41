@@ -1,0 +1,17 @@
+5 REMark date_41
+7 CLS # 2 : CLS #1 : CLS #0
+10 d$=DATE$
+20 PRINT d$;" ted"
+30 d2$=DATE$(DATE+60) : PRINT d2$;" ted +minuta"
+40 d3$=DATE$(DATE+3600) : PRINT d3$;" ted +hodina"
+50 d4$=DATE$(DATE+86400) : PRINT d4$;" ted +den"
+55 PRINT ""
+56 PRINT d$;" ted"
+60 d5$=DATE$(DATE-86400) : PRINT d5$;" ted -den"
+61 d6$=DATE$(DATE-'86400') : PRINT d6$;" ted -den"
+62 odecti='86400'
+63 d7$=DATE$(DATE-odecti) : PRINT d7$;" ted -den"
+65 d8$=DATE$(DATE-(3600*24)) : PRINT d8$;" ted -den"
+70 d9$=DATE$(DATE-3600) : PRINT d9$;" ted -hodina"
+80 d10$=DATE$(DATE-60) : PRINT d10$;" ted -minuta"
+90 d11$=DATE$(DATE-1) : PRINT d11$;" ted -vterina"
