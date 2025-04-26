@@ -1,0 +1,6 @@
+5 CLS#1:CLS#2:LIST#2
+10 FOR a= 1 TO 1000
+20 ADATE +86400
+30 o$=a & " - " & DATE$
+35 PRINT o$
+50 NEXT a
