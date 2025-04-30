@@ -1,0 +1,12 @@
+5 REMark funkce_2
+7 CLS : CLS #0
+10 DEFine FuNction suma(a,b)
+20 PRINT "a=";a
+30 PRINT "b=";b
+40 LET sum=a+b
+57 RETurn sum
+60 END DEFine 
+100 :
+200 PRINT suma(10,20)
+300 PRINT "a+b=";suma(10,20)
+500 PRINT sum

@@ -1,0 +1,27 @@
+5 REMark CisloDne_1
+10 PRINT "Zadejte rok (napr. 2024):"
+20 INPUT YR
+30 PRINT "Zadejte mesic (1-12):"
+40 INPUT MN
+50 PRINT "Zadejte den v mesici:"
+60 INPUT DD
+70 DIM MD(12)
+80 MD(1) = 31
+90 MD(2) = 28
+100 MD(3) = 31
+110 MD(4) = 30
+120 MD(5) = 31
+130 MD(6) = 30
+140 MD(7) = 31
+150 MD(8) = 31
+160 MD(9) = 30
+170 MD(10) = 31
+180 MD(11) = 30
+190 MD(12) = 31
+210 IF (YR MOD 4 = 0) AND ((YR MOD 100 <> 0) OR (YR MOD 400 = 0)) THEN MD(2) = 29
+220 LET SUM = 0
+230 FOR I = 1 TO MN - 1
+240 LET SUM = SUM + MD(I)
+250 NEXT I
+260 LET DAYNUM = SUM + DD
+270 PRINT "Cislo dne v roce: "; DAYNUM

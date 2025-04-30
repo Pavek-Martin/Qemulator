@@ -1,0 +1,23 @@
+5 REMark InsertSort_2
+7 CLS : CLS #0
+110 DIM color$(8,1)
+115 RESTORE 500
+120 FOR item =1 TO 8 : READ color$(item)
+130 FOR item = 2 TO 8
+140 LET p = item
+150 LET comp$ = color$(p)
+160 LET color$(0) = comp$
+170 REPeat compare
+180 IF comp$>=color$(p-1) : EXIT compare
+190 LET color$(p) = color$(p-1)
+200 LET p = p - 1
+210 END REPeat compare
+220 LET color$(p) = comp$
+230 END FOR item
+240 REMark PRINT " ";color$
+242 REMark PRINT color$
+500 DATA "e","f","c","h"
+502 DATA "a","g","b","d"
+600 FOR o = 1 TO 8
+610 PRINT "color$(";o;")=";color$(o)
+620 NEXT o

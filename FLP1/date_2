@@ -1,7 +1,8 @@
 5 REMark date_2
-7 CLS
+7 CLS : LIST
 10 d$=DATE$
 20 PRINT d$
+22 PRINT "-----"
 30 d2$=DATE$(DATE+60) : PRINT d2$
 40 d3$=DATE$(DATE+3600) : PRINT d3$
 50 d4$=DATE$(DATE+86400) : PRINT d4$

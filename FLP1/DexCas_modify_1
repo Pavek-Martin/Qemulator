@@ -3,19 +3,24 @@
 100 REMark BST change for BOOT program
 110 REMark adjust day/month language for your system
 120 CLS : CLS #0
+125 PRINT DATE$
+127 PRINT DAY$
 130 d$ = DATE$ : mth$ = d$(6 TO 8)
-140 IF d$(6 TO 8) = 'Mar' OR d$(6 TO 8) = 'Oct' THEN 
+140 IF d$(6 TO 8) = 'Apr' OR d$(6 TO 8) = 'Oct' THEN 
 150 REMark British summer time +1 hour in March, -1 hour in October
-160 REMarm "Sprint forward, Fall back"
 170 REMark occurs on last weekend of those mounths
-180 IF DAY$ = 'Sun' THEN 
+180 IF DAY$ = 'Sat' THEN 
 190 IF d$( 10 TO 11) > 24 THEN 
 200 REMark last weekend of March or October
 210 INPUT #0,'Date$ = ';(DATE$);'. Adjust clock for BST?';yn$
 220 IF yn$ == 'y' THEN 
-230 IF d$(6 TO 8) = 'Mar' THEN ADATE 60*60 : ELSE ADATE -60*60
+225 REMark IF d$(6 TO 8) = 'xxx' THEN ADATE +3600 : ELSE ADATE -3600
+230 IF d$(6 TO 8) = 'Apr' THEN ADATE +3600 : ELSE ADATE -3600
 240 PRINT #0,'New time=';DATE$
 250 END IF 
 260 END IF 
 270 END IF 
 280 END IF 
+290 PRINT "zde"
+300 PRINT DATE$
+310 REMark aaa

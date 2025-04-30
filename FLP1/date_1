@@ -1,7 +1,7 @@
 5 REMark date_1
-7 CLS : CLS #0
+7 CLS : CLS #0 : LIST
 100 DEFine FuNction date20$(seconds)
-112 offset='1724047669'
+112 offset='1745667632'
 113 REMark    ^ linux stamp ted
 125 RETurn DATE$(offset+seconds)
 130 END DEFine 
@@ -15,5 +15,5 @@
 521 REMark stamp to Datetime + den
 600 PRINT DATE$
 601 REMark ^ dobre
-610 PRINT DATE$("1724047669")
-620 PRINT DATE$('1724047669')
+610 PRINT DATE$("1745667632")
+620 PRINT DATE$('1745667692')

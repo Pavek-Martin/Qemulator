@@ -1,0 +1,11 @@
+5 REMark funkce_3
+6 REMark ukazka promenna local uvnitr funkce
+7 CLS
+110 LET num = 1
+120 test
+130 DEFine PROCedure test
+140 LOCal num
+150 LET num = 2
+160 PRINT num
+180 END DEFine 
+200 PRINT num

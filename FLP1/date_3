@@ -1,8 +1,11 @@
 5 REMark date_3
-99 CLS
+99 CLS : LIST
 100 D$=DATE$
 110 year=D$(1 TO 4) : day=D$(10 TO 12): D$=D$(6 TO 8)
+115 print D$
 120 month=(D$ INSTR "..JanFebMarAprMayJunJulAugSepOctNovDec")/3
+125 PRINT month
+127 stop
 130 DIM month$(12,9) : RESTORE 150
 140 FOR m=1 TO 12 : READ month$(m)
 150 DATA "Leden","Unor","Brezen","Duben","Kveten","Cerven","Cervenec"

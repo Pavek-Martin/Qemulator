@@ -1,5 +1,5 @@
 5 REMark date_41
-7 CLS # 2 : CLS #1 : CLS #0
+7 CLS # 2 : CLS #1 : CLS #0 : LIST
 10 d$=DATE$
 20 PRINT d$;" ted"
 30 d2$=DATE$(DATE+60) : PRINT d2$;" ted +minuta"
