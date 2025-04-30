@@ -1,0 +1,5 @@
+
+
+r=2004 ; clear ; cal 3 $r ; cal -j 3 $r ; cal 10 $r ; cal -j 10 $r
+
+

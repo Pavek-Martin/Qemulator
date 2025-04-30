@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Q-emuLator\QemuLator.exe" "C:\Users\DELL\Documents\QL_SAVE\Muj-Cfg-Zde.QCF"

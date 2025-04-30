@@ -1,0 +1,34 @@
+5 REMark flp3_CreateHistSelect
+7 CLS #1
+20 fh$="flp3_HistCas"
+30 DELETE fh$
+40 PRINT "byl smazan stary soubor historie"
+45 PRINT fh$
+47 PRINT ""
+50 PRINT "nyni vytvorim novy soubor historie"
+114 PRINT "jaky usek roku mam zapsat"
+116 PRINT "do souboru historie " & '"' & fh$ & '"'
+118 PRINT "zadej 1, 2 nebo 3 ?"
+119 INPUT u
+123 IF u < 1 OR u > 3 THEN PRINT "chyba, zadej 1, 2 nebo 3" : GO TO 119
+129 OPEN_NEW #7, fh$
+130 IF u = 1 THEN PRINT #7,"1" : PRINT #7,"1"
+135 IF u = 2 THEN PRINT #7,"2" : PRINT #7,"120"
+140 IF u = 3 THEN PRINT #7,"3" : PRINT #7,"333"
+150 CLOSE #7
+160 PRINT "byl vytvoren soubor historie"
+165 PRINT fh$
+167 PRINT ""
+170 PRINT "kontrola zapsaneho souboru"
+172 PRINT "soubor obsahuje :"
+175 OPEN_IN #6, fh$
+180 INPUT #6, hist_usek
+185 INPUT #6, hist_suma
+190 CLOSE #6
+195 PRINT "hist_usek = " & hist_usek
+200 PRINT "hist_suma = " & hist_suma
+205 PRINT "nyni spust program " & '"ZmenaCas_2"'
+997 REMark goto 999 = save file
+998 STOP
+999 s$ = "flp3_CreateHistSelect"
+1000 SAVE s$

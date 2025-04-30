@@ -1,0 +1,29 @@
+5 REMark sakamato_1k
+6 CLS#1
+7 FOR m = 1 TO 12
+8 o$="FLP3_" & "ql_" & m & ".txt"
+10 PRINT o$
+12 OPEN_NEW #7, o$
+50 DIM T(12)
+60 T(1)=0: T(2)=3: T(3)=2: T(4)=5: T(5)=0: T(6)=3
+70 T(7)=5: T(8)=1: T(9)=4: T(10)=6: T(11)=2: T(12)=4
+72 REMark dny v mesici
+74 DIM MD(12)
+76 MD(1)=31: MD(2)=99: MD(3)=31: MD(4)=30: MD(5)=31: MD(6)=30
+77 MD(7)=31: MD(8)=31: MD(9)=30: MD(10)=31: MD(11)=30: MD(12)=31
+79 FOR R = 1800 TO 2200
+80 IF (R MOD 4 = 0) AND ((R MOD 100 <> 0) OR (R MOD 400 = 0)) THEN MD(2) = 29 : ELSE MD(2)=28
+101 D = MD(m)
+120 Y = R
+122 REMark Pokud je mesic  leden nebo unor, snizi se rok o 1
+125 IF (m < 3 ) THEN Y = Y - 1
+127 DOW = 0
+150 DOW = (Y + INT(Y/4) - INT(Y/100) + INT(Y/400) + T(m) + D) MOD 7
+170 LASTSUNDAY = D - DOW
+190 PRINT R;" ";LASTSUNDAY; ".";m
+192 PRINT #7, R;" ";LASTSUNDAY; ".";m
+200 NEXT R
+205 PRINT D
+220 CLOSE #7
+230 NEXT m
+999 s$="flp3_sakamato_1k"
