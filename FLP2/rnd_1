@@ -1,0 +1,6 @@
+5 REMark rnd_1
+10 FOR a=1 TO 10
+20 x=RND(1000)
+30 PRINT x
+40 NEXT a
+50 PRINT "-----------"

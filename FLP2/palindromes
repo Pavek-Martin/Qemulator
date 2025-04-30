@@ -1,0 +1,14 @@
+5 REMark palindromes
+110 DIM text$(30)
+120 LET text$ = FILL$(' ',30)
+130 LET count = 30
+140 REPeat get_letters
+150  READ characters$
+160 IF characters$ = "*" THEN EXIT get_letters
+170 LET count = count -1
+180 LET text$(count) = characters$
+190 END REPeat get_letters
+200 PRINT text$
+210 DATA "A","B","L","E","W","A","S","I","E","R"
+220 DATA "E","I","S","A","W","E","L","B","A","*"
+300 STOP

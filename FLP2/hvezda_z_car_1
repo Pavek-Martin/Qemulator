@@ -1,0 +1,11 @@
+5 REMark  hvezda_z_car_1
+6 CLS
+8 PRINT "Ctrl + mezera = break"
+9 PRINT "pause" : PAUSE
+10 PAPER 6
+12 CLS
+20 BORDER 1,2
+30 REPeat star
+40 INK RND(5)
+50 LINE 50,60 TO RND(100), RND(100)
+60 END REPeat star

@@ -1,0 +1,14 @@
+5 REMark roman_convert_1
+7 PAPER 0 : INK 7
+10 CLS : CLS #0
+110 INPUT "zadej letopocet :";number
+120 RESTORE 210
+130 FOR type = 1 TO 7
+140 READ letter$, value
+150 REPeat output
+160 IF number < value : EXIT output
+170 PRINT letter$;
+180 LET number = number - value
+190 END REPeat output
+200 END FOR type
+210 DATA "M",1000,"D",500,"C",100,"L",50,"X",10,"V",5,"I",1

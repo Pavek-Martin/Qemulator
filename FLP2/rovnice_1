@@ -1,0 +1,6 @@
+5 REMark rovnice_1
+10 CLS
+100 READ a,b,c
+110 PRINT 'Rott is' ! (-b + SQRT(b^2 - 4*a*c))/(2/a)
+120 REMark DATA 2,-3,1
+130 DATA 2,-7,1

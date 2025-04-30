@@ -1,0 +1,6 @@
+5 REMark kostka_1
+7 CLS
+8 PAPER 1
+9 INK 7
+10 LET kostka = RND(1 TO 6)
+20 PRINT kostka

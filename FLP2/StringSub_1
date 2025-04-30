@@ -1,0 +1,15 @@
+5 REMark StringSub_1
+7 CLS
+10 LET a$="abcdefghijkl"
+20 PRINT "a$=";'"';a$;'"'
+30 LET an$ = a$( 6 TO 9)
+35 REMark zacina se od jednicky a=1
+40 PRINT an$
+50 LET d_a = LEN(a$)
+60 PRINT "delka a$=";d_a
+65 znaku_od_konce = 5
+67 znaku_od_konce = znaku_od_konce - 1
+70 LET an2$ = a$(d_a - znaku_od_konce TO d_a)
+80 PRINT an2$
+90 PRINT "znaku_od_konce = ";znaku_od_konce + 1
+99 CLS #0

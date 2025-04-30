@@ -1,0 +1,12 @@
+5 REMark scitani_strings_1
+7 CLS
+15 LET two$ = "two"
+17 PRINT two$
+18 PRINT LEN(two$)
+25 LET four$ = "four"
+27 PRINT four$
+28 PRINT LEN(four$)
+35 LET six$ = two$ & four$
+37 PRINT "LET six$ = two$ & four$"
+45 PRINT six$
+55 PRINT LEN(six$)

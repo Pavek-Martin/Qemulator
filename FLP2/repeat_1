@@ -1,0 +1,9 @@
+5 REMark repeat_1
+7 CLS
+10 LET a=10
+20 REPeat loop
+30 PRINT a
+35 IF a <=0 THEN EXIT loop
+40 LET a=a-1
+100 END REPeat loop
+110 PRINT "zde"

@@ -1,0 +1,11 @@
+5 REMark ReadFile_1
+7 CLS
+8 suma=0
+110 OPEN_IN #6, flp1_test
+120 FOR radek = 1 TO 100
+130 INPUT #6, cislo
+140 PRINT cislo;" "
+145 suma=suma+cislo
+150 END FOR radek
+160 CLOSE #6
+170 PRINT "suma=";suma

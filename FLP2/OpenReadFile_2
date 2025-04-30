@@ -1,0 +1,11 @@
+5 REMark ReadFile_2
+8 DIM r(2)
+9 LET n=1
+110 OPEN_IN #6, flp1_test
+120 FOR radek = 1 TO 2
+130 INPUT #6, cislo
+143 r(n)=cislo
+146 PRINT r(n)
+147 n=n+1
+150 END FOR radek
+160 CLOSE #6

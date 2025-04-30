@@ -1,0 +1,11 @@
+5 REMark print_za_sebou_1
+10 CLS
+15 LET s = 0
+25 REPeat total
+35 LET n = RND(1 TO 6)
+45 PRINT ! n !
+47 REMark print nak za sebou
+55 LET s = s + n
+65 IF n = 6 THEN EXIT total
+75 END REPeat total
+85 PRINT s

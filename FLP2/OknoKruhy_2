@@ -1,0 +1,12 @@
+5 REMark OknoKruhy_2
+110 MODE 8
+120 OPEN #7, scr_135x100a100x50
+130 SCALE #7,100,0,0
+140 PAPER #7,0 : CLS #7
+150 BORDER #7,2,4
+160 FOR barva = 1 TO 100
+170 INK #7, barva
+180 LET rot = barva*PI/50
+190 CIRCLE #7,50,50,30,.5,rot
+200 END FOR barva
+210 CLOSE #7

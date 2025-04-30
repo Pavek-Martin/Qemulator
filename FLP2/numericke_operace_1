@@ -1,0 +1,23 @@
+10 REMark numericke_operace_1
+20 CLS
+22 PRINT "sqrt(2)=";SQRT(2)
+24 PRINT "sqrt(16)=";SQRT(16)
+30 PRINT "sqrt(2.6)=";SQRT(2.6)
+40 PRINT "int(2.4)=";INT(2.4)
+50 PRINT "INT(0.4)=";INT(.4)
+55 PRINT "INT(-2.7)=";INT(2.7)
+60 PRINT "ABS(7)=";ABS(7)
+70 PRINT "ABS(-4.3)=";ABS(-4.3)
+80 PRINT "13 modulo 5 = ";13 MOD 5
+90 PRINT "11 modulo 2 = ";11 MOD 2
+100 PRINT "21 modulo 7 = ";21 MOD 7
+110 PRINT "4^1.5=";4^1.5
+120 PRINT "2^16=";2^16
+900 file_name$="numericke_operace_1"
+1000 SAVE "flp1_" & file_name$
+1005 SAVE "flp2_" & file_name$
+1010 COPY "flp1_" & file_name$ TO "flp2_" & file_name$
+1022 REMark copy nefunguje
+1023 REMark normalne prikazem ale funfuje
+1030 CLS #0
+1040 LIST

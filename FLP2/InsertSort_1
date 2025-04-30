@@ -1,0 +1,26 @@
+5 REMark InsertSort_1
+7 CLS : CLS #0
+110 DIM color$(8,7)
+115 RESTORE 250
+117 PRINT "puvodni nactene pole:"
+120 FOR item =1 TO 8
+122 READ color$(item)
+125 PRINT color$(item)
+127 END FOR item
+130 FOR item = 2 TO 8
+140 LET p = item
+150 LET comp$ = color$(p)
+160 LET color$(0) = comp$
+170 REPeat compare
+180 IF comp$>=color$(p-1) : EXIT compare
+190 LET color$(p) = color$(p-1)
+200 LET p = p - 1
+210 END REPeat compare
+220 LET color$(p) = comp$
+230 END FOR item
+235 PRINT "press any key" : PAUSE
+240 PRINT "pole setridene Insert sortem:"
+242 PRINT color$ : REMark vytiskne cele pole najednou pod sebe
+245 :
+250 DATA "black","blue","magenta","red"
+260 DATA "green","cyan","yellow","white"

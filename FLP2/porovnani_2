@@ -1,0 +1,30 @@
+5 REMark porovnani_2
+80 CLS : CLS #0
+100 locat = 0
+105 LET p = 1
+110 REPeat loop
+120 RESTORE locat + 1000
+125 IF EOF : EXIT loop
+130 READ a$, b$
+135 REMark PRINT a$, b$
+140 IF a$=b$ THEN PRINT a$;" = ";b$
+141 IF a$==b$ THEN PRINT a$;" == ";b$
+142 IF a$>b$ THEN PRINT a$;" > ";b$
+143 IF a$<b$ THEN PRINT a$;" < ";b$
+144 IF a$<=b$ THEN PRINT a$;" <= ";b$
+145 IF a$>=b$ THEN PRINT a$;" >= ";b$
+146 IF a$<>b$ THEN PRINT a$;" <> ";b$
+147 LET p = p + 1
+148 IF p > 5 THEN p = 1 : PRINT "pause" : PAUSE
+150 locat = locat + 1
+160 END REPeat loop
+888 :
+1000 DATA "cat","dog"
+1001 DATA "dog","cat"
+1002 DATA "alf","ben"
+1003 DATA "kit","ben"
+1004 DATA "kit","len"
+1005 DATA "kit","kit"
+1006 DATA "pat","len"
+1007 DATA "len","len"
+1008 DATA "pat","pet"
