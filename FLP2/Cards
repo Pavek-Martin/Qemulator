@@ -1,0 +1,25 @@
+1 LIST
+5 REMark Cards
+7 CLS : CLS #0
+110 DIM suitname$(4,8)
+115 DIM cardval$(13,5)
+120 f$=" of "
+130 set_up
+140 REPeat cards
+150 INPUT "Enter a card number 1-52 :" ! card
+160 IF card<1 OR card>52 THEN EXIT cards
+170 LET suit = (card-1) DIV 13
+180 LET value = card MOD 13
+190 IF value = 0 THEN LET value = 13
+200 PRINT cardval$(value) ! f$ ! suitname$(suit)
+210 END REPeat cards
+215 :
+220 DEFine PROCedure set_up
+225 RESTORE 260
+230 FOR s = 1 TO 4 : READ suitname$(s)
+240 FOR v = 1 TO 13 : READ cardval$(v)
+250 END DEFine 
+260 DATA "hearts","clubs","diamonds","spades"
+270 DATA "Ace","Two","Three","Four","Five","Six","Seven"
+280 DATA "Eight","Nine","Ten","Jack","Queen","King"
+290 REMark tohle nak blbne

@@ -1,0 +1,8 @@
+5 REMark cary_1
+20 MODE 8
+30 CLS
+40 FOR i = 0 TO 8
+50 INK i
+55 PRINT i
+60 LINE 50+i,60 TO 70+i,80
+70 NEXT i

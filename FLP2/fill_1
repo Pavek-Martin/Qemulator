@@ -1,0 +1,4 @@
+5 REMark fill_1
+10 CLS
+20 PRINT a$
+30 PRINT LEN(a$)

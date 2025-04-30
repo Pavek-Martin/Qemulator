@@ -1,0 +1,12 @@
+5 REMark cls_1
+10 PRINT "aaa"
+20 LIST
+25 PAUSE
+30 CLS #0
+32 REMark cls #0 maze cerny okno zapisovaci
+35 PAUSE
+40 CLS #1
+42 REMark cls a cls #1 maze cerveny okno vystupni
+45 PAUSE
+50 CLS #2
+52 REMark cls #2 maze bili okno editovaci

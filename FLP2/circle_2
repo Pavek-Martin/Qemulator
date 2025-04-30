@@ -1,0 +1,5 @@
+5 REMark circle_2
+7 CLS
+100 FOR rot = 0 TO 2*PI STEP PI/6
+110 CIRCLE 80,50,40,.5,rot
+120 NEXT rot

@@ -1,0 +1,14 @@
+5 REMark block_1
+20 CLS
+100 LET back=2
+105 LET color = 5
+110 LET acr=20
+120 LET down=100
+130 LET side=50
+140 GO SUB 170
+150 PRINT "end"
+160 STOP
+170 REMark subroutine draw square
+180 PAPER back : CLS
+190 BLOCK side,side,acr,down,color
+200 RETurn 

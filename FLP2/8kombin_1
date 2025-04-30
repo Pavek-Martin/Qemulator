@@ -1,0 +1,21 @@
+5 REMark 8kombin_1
+6 CLS
+7 LET p = 1
+10 FOR a=0 TO 1
+20 FOR b=0 TO 1
+30 FOR c=0 TO 1
+40 FOR d=0 TO 1
+50 FOR e=0 TO 1
+60 FOR f=0 TO 1
+70 FOR g=0 TO 1
+80 FOR h=0 TO 1
+100 PRINT p;" ";a;b;c;d;e;f;g;h
+110 LET p = p + 1
+200 NEXT h
+210 NEXT g
+220 NEXT f
+230 NEXT e
+240 NEXT d
+250 NEXT c
+260 NEXT b
+270 NEXT a

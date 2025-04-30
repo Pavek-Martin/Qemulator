@@ -1,0 +1,8 @@
+5 REMark ascii_1
+6 CLS : CLS #0
+7 LET p=0
+10 FOR aa= 1 TO 128
+20 PRINT aa;" ";CHR$(aa)
+22 LET p=p+1
+25 IF p>10 THEN PRINT "pause" : PAUSE : LET p=0
+40 NEXT aa

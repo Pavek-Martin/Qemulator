@@ -1,0 +1,17 @@
+5 REMark array_2
+6 CLS
+10 DIM a$(5,5)
+60 FOR aa = 1 TO 5
+70 FOR bb = 1 TO 5
+75 REMark PRINT aa;bb
+77 x=RND(9)
+78 PRINT x
+80 LET a$(aa,bb)=x
+90 NEXT bb
+99 NEXT aa
+101 PRINT "press any key": PAUSE
+110 FOR cc = 1 TO 5
+120 FOR dd = 1 TO 5
+140 PRINT "a$(";cc;",";dd;")=";a$(cc,dd)
+150 NEXT dd
+160 NEXT cc

@@ -1,0 +1,11 @@
+5 REMark dve_kostky_hazeni_1
+105 CLS
+110 DIM tally(12)
+120 FOR throw = 1 TO 400
+130 LET die_1 = RND(1 TO 6)
+140 LET die_2 = RND(1 TO 6)
+150 LET score = die_1 + die_2
+160 LET tally(score) = tally(score) +1
+170 END FOR throw
+171 REMark misto next - end for throw
+180 FOR number = 2 TO 12 : PRINT number;" kolo";" = ";tally(number);" bodu"

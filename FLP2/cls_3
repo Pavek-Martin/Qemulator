@@ -1,0 +1,13 @@
+5 ren cls_3
+10 PAPER #1,1
+15 INK #1,7
+20 CLS #1
+25 PRINT "xxxxxxxxx"
+30 LIST
+40 PAUSE
+50 PAPER #1,5
+60 INK #1,3
+70 CLS #1 : REMark cls
+80 PRINT "cccccccc"
+85 CLS #2
+90 LIST

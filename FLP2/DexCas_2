@@ -1,3 +1,5 @@
+91 CLS #2:CLS #1 :LIST
+98 REMark DexCas_2
 100 REMark BST change for BOOT program
 110 REMark adjust day/month language for your system
 120 CLS : CLS #0

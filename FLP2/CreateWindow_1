@@ -1,0 +1,10 @@
+5 REMark CreateWindow_1
+7 CLS
+100 REMark Create a window
+110 REMark OPEN #5, scr_400x200a20x50
+115 OPEN #5, scr_300x100a30x50
+116 REMark sirka vyska
+120 PAPER #5,4
+125 CLS #5
+130 BORDER #5,1
+500 CLOSE #5

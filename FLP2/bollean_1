@@ -1,0 +1,9 @@
+5 REMark bollean_1
+50 CLS
+110 LET true = 1
+115 LET false = 0
+120 LET hungry = true
+125 IF hungry THEN PRINT "true"
+130 LET hungry = false
+135 IF hungry THEN PRINT "false"
+150 LIST

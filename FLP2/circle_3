@@ -1,0 +1,6 @@
+5 REMark circle_3
+7 CLS
+10 INK 5
+20 FILL 1
+25 REMark vylpni krun na cian barvu
+30 CIRCLE 50,50,30
