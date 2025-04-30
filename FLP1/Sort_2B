@@ -1,0 +1,43 @@
+5 REMark Sort_2B
+7 CLS : CLS #0
+95 REMark -------------------------
+100 nacti_soubor$="flp1_Sort_2A_MixArray"
+105 sorted_file_write$="flp1_Sort_2B_SortedArray"
+107 REMark ------------------------
+110 PRINT "nacitam soubor:";nacti_soubor$
+112 PAUSE 200
+130 DIM p$(243,5)
+135 OPEN_IN #6, nacti_soubor$
+136 REMark pozor open_new = Write ; open_in = read !!
+140 FOR aa = 1 TO 243
+145 INPUT #6, file_line$
+147 PRINT aa;" ";file_line$
+148 LET p$(aa)=file_line$
+150 NEXT aa
+151 CLOSE #6
+160 REMark -- sort ---------------
+165 PRINT "tridim pole"
+170 FOR item = 2 TO 243
+175 LET p = item
+180 LET comp$=p$(p)
+185 LET p$(0) = comp$
+190 REPeat compare
+195 IF comp$>=p$(p-1) : EXIT compare
+200 LET p$(p) = p$(p-1)
+210 LET p=p-1
+220 END REPeat compare
+225 LET p$(p)= comp$
+230 END FOR item
+240 REMark -- vypis setrideneho --
+250 PRINT "setrideno"
+252 file_write$="out"
+255 OPEN_NEW #7, sorted_file_write$
+260 PRINT "press any key" : PAUSE
+270 FOR cc = 1 TO 243
+280 PRINT cc;" ";p$(cc)
+282 PRINT #7, cc;" ";p$(cc)
+290 NEXT cc
+300 CLOSE #7
+310 PRINT "setridene radky byly,"
+320 PRINT "zapsany do souboru"
+330 PRINT sorted_file_write$

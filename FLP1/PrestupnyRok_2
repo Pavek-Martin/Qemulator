@@ -1,0 +1,7 @@
+5 REMark PrestupnyRok_1
+10 PRINT "Zadejte rok, ktery chcete overit:"
+20 INPUT Y
+30 IF Y MOD 400 = 0 THEN PRINT Y; " je prestupny rok": GO TO 90
+40 IF Y MOD 100 = 0 THEN PRINT Y; " neni prestupny rok": GO TO 90
+50 IF Y MOD 4 = 0 THEN PRINT Y; " je prestupny rok": GO TO 90
+60 PRINT Y; " neni prestupny rok"

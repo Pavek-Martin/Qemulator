@@ -1,0 +1,78 @@
+5 REMark UsekRoku_8
+6 REMark CLS #1
+20 ted$=DATE$
+35 PRINT ted$
+40 rr$=ted$(1 TO 4)
+45 PRINT rr$
+47 R = rr$
+49 REMark prevede rr$ na R (int),funguje !
+50 R = 1993
+52 PRINT R
+55 DIM T(12)
+60 T(1)=0: T(2)=3: T(3)=2: T(4)=5: T(5)=0: T(6)=3
+70 T(7)=5: T(8)=1: T(9)=4: T(10)=6: T(11)=2: T(12)=4
+72 REMark dny v mesici
+74 DIM MD(13)
+76 MD(0)=0: MD(1)=31: MD(2)=99: MD(3)=31: MD(4)=30: MD(5)=31: MD(6)=30
+77 MD(7)=31: MD(8)=31: MD(9)=30: MD(10)=31: MD(11)=30: MD(12)=31
+79 IF (R MOD 4 = 0) AND ((R MOD 100 <> 0) OR (R MOD 400 = 0)) THEN MD(2) = 29 : ELSE MD(2)=28
+82 REMark vypocet pro brezen (M=3)
+90 M = 3
+101 D = MD(M)
+110 Y = R
+130 DOW_MAR = (Y + INT(Y/4) - INT(Y/100) + INT(Y/400) + T(M) + D) MOD 7
+140 LASTSUNDAY_MAR = D - DOW_MAR
+142 REMark cislo dne posledni nedele brezen
+145 LET SUMB = 0
+147 FOR AA = 0 TO M - 1
+149 LET SUMB = SUMB + MD(AA)
+251 NEXT AA
+253 LET SUMB = SUMB + LASTSUNDAY_MAR
+255 REMark vypocet pro rijen (M=10)
+260 M = 10
+270 D = MD(M)
+280 REMark Y = R
+290 DOW_OCT = (Y + INT(Y/4) - INT(Y/100) + INT(Y/400) + T(M) + D) MOD 7
+300 LASTSUNDAY_OCT = D - DOW_OCT
+310 REMark cislo dne posledni nedele rijen
+320 LET SUMR = 0
+330 FOR BB = 0 TO M - 1
+340 LET SUMR = SUMR + MD(BB)
+350 NEXT BB
+352 LET SUMR = SUMR + LASTSUNDAY_OCT
+370 PRINT "brezen "; R; " je "; LASTSUNDAY_MAR; ".3.";R;" ";SUMB
+380 PRINT "rijen  "; R; " je "; LASTSUNDAY_OCT; ".10.";R;" ";SUMR
+390 REMark PRINT MD(2)
+400 REMark -- zjisti aktualni datum --
+402 mm$=ted$(6 TO 8)
+403 REMark mm$="Feb"
+405 PRINT mm$ & "< mesic ted"
+407 mes=(mm$ INSTR "..JanFebMarAprMayJunJulAugSepOctNovDec")/3
+410 PRINT mes & "< cislo mesice ted"
+415 dd=ted$(10 TO 11)
+416 REMark dd=22
+420 PRINT dd &"< den ted"
+425 hh=ted$(13 TO 14)
+430 PRINT hh &"< hodina ted"
+435 LET suma = 0
+442 FOR cc = 0 TO mes -1
+445 REMark PRINT cc &"<----"
+450 LET suma = suma + MD(cc)
+455 NEXT cc
+460 LET suma = suma + dd
+465 PRINT suma &"< cislo dne ted"
+470 REMark -- urci usek roku --
+472 usek = 0
+473 suma = 307 : hh = 20
+475 IF suma < SUMB THEN usek = 1 : PRINT "usek 1-A"
+480 IF suma = SUMB AND hh < 2 THEN usek = 1 : PRINT "usek 1-B"
+485 IF suma = SUMB AND hh >= 2 THEN usek = 2 : PRINT "usek 2-A"
+490 IF suma > SUMB AND suma < SUMR THEN usek = 2 : PRINT "usek 2-B"
+495 IF suma = SUMR AND hh < 3 THEN usek = 2 : PRINT "usek 2-C"
+500 IF suma = SUMR AND hh >= 3 THEN usek = 3 : PRINT "usek 3-A"
+505 IF suma > SUMR THEN usek = 3 : PRINT "usek 3-B"
+510 IF usek = 0 THEN PRINT "chyba usek" : STOP
+515 PRINT usek
+889 STOP
+999 s$="FLP3_UsekRoku_8"
+1000 SAVE s$
