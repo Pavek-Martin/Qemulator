@@ -9,5 +9,5 @@
 45 PRINT out$
 55 NEXT x
 998 STOP
-999 s$="rnd_2"
+999 s$="rnd_3"
 1000 SAVE s$

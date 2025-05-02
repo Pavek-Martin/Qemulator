@@ -2,8 +2,8 @@
 6 REMark generuje, mixuje a uklada do souboru filename$
 10 CLS : CLS #0
 11 REMark ------------
-92 pocet_mix=1000
-94 filename$="Sort_2A_MixArray"
+92 pocet_mix = 1000
+94 filename$ = "Sort_2A_MixArray"
 95 REMark ------------
 97 poc = 1
 98 DIM g$(243,5)
@@ -14,26 +14,26 @@
 121 FOR dd = 97 TO 99
 122 FOR ee = 97 TO 99
 130 REMark PRINT poc;" ";aa;bb;cc
-131 LET o$=CHR$(aa)& CHR$(bb) & CHR$(cc)& CHR$(dd) & CHR$(ee)
+131 LET o$ = CHR$(aa) & CHR$(bb) & CHR$(cc) & CHR$(dd) & CHR$(ee)
 135 PRINT poc;" ";CHR$(aa);CHR$(bb);CHR$(cc);CHR$(dd);CHR$(ee)
-136 LET g$(poc)=o$
-137 LET poc=poc+1
+136 LET g$(poc) = o$
+137 LET poc = poc + 1
 138 NEXT ee
 139 NEXT dd
 140 NEXT cc
 150 NEXT bb
 160 NEXT aa
 170 REMark PRINT "prvni radek :";g$(1)
-175 REMark PRINT "posleni rdaek :";g$(243)
+175 REMark PRINT "posledni radek :";g$(243)
 200 REMark mixovani klicu -----------
 203 PRINT "mixuju klice pole ";pocet_mix;" x"
-206 FOR jj=1 TO pocet_mix
-210 rnd1=RND(1 TO 243)
-220 rnd2=RND(1 TO 243)
+206 FOR jj = 1 TO pocet_mix
+210 rnd1 = RND(1 TO 243)
+220 rnd2 = RND(1 TO 243)
 230 REMark PRINT rnd1;" ";rnd2
-240 pomocna_mix$=g$(rnd1)
-250 LET g$(rnd1)=g$(rnd2)
-260 LET g$(rnd2)=pomocna_mix$
+240 pomocna_mix$ = g$(rnd1)
+250 LET g$(rnd1) = g$(rnd2)
+260 LET g$(rnd2) = pomocna_mix$
 270 NEXT jj
 280 REMark vypis zamixovaneho pole
 285 OPEN_NEW #7, filename$

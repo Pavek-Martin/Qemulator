@@ -1,0 +1,11 @@
+5 REMark random jednotka save
+7 file$ = "SmazMe!"
+10 jednotka$ = "flp"
+15 r$ = RND(1 TO 3)
+20 jednotka$ = jednotka$ & r$ & "_"
+30 jednotka$ = jednotka$ & file$
+35 PRINT jednotka$
+40 SAVE jednotka$
+889 STOP
+999 s$ = "RndSave_1"
+1000 SAVE s$

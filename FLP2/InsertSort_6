@@ -1,6 +1,6 @@
 5 REMark InsertSort_5
 7 CLS : CLS #0
-10 LET m = 19
+10 LET m = 38
 11 REMark m = pocet polozek v radcich data
 110 DIM color$(m,2)
 115 RESTORE 500
@@ -19,9 +19,13 @@
 240 REMark PRINT " ";color$
 242 REMark PRINT color$
 500 DATA "ax","ef","ab","ca","aa","ed","da","ac","ah","ag","ah","zz","za","zt","xy","df","gj","bb","zc"
+505 DATA "1x","1f","2b","3a","7a","8d","2a","7c","8h","9g","9h","5z","7a","2t","1y","2f","2j","2b","2c"
+590 OPEN_NEW #7, sorted
 600 FOR o = 1 TO m
 610 PRINT "color$(";o;")=";color$(o)
+613 PRINT #7, "color$(";o;")=";color$(o)
 620 NEXT o
+625 CLOSE #7
 998 STOP
-999 s$="InsertSort_5"
+999 s$="InsertSort_6"
 1000 SAVE s$

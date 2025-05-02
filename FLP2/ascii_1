@@ -6,3 +6,6 @@
 22 LET p=p+1
 25 IF p>10 THEN PRINT "pause" : PAUSE : LET p=0
 40 NEXT aa
+998 STOP
+999 s$="ascii_1"
+1000 SAVE s$
