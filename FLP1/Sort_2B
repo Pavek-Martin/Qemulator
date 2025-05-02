@@ -1,8 +1,8 @@
 5 REMark Sort_2B
 7 CLS : CLS #0
 95 REMark -------------------------
-100 nacti_soubor$="flp1_Sort_2A_MixArray"
-105 sorted_file_write$="flp1_Sort_2B_SortedArray"
+100 nacti_soubor$ = "flp1_Sort_2A_MixArray"
+105 sorted_file_write$ = "flp1_Sort_2B_SortedArray"
 107 REMark ------------------------
 110 PRINT "nacitam soubor:";nacti_soubor$
 112 PAUSE 200
@@ -12,7 +12,7 @@
 140 FOR aa = 1 TO 243
 145 INPUT #6, file_line$
 147 PRINT aa;" ";file_line$
-148 LET p$(aa)=file_line$
+148 LET p$(aa) = file_line$
 150 NEXT aa
 151 CLOSE #6
 160 REMark -- sort ---------------
@@ -22,15 +22,15 @@
 180 LET comp$=p$(p)
 185 LET p$(0) = comp$
 190 REPeat compare
-195 IF comp$>=p$(p-1) : EXIT compare
+195 IF comp$ >= p$(p-1) : EXIT compare
 200 LET p$(p) = p$(p-1)
-210 LET p=p-1
+210 LET p = p - 1
 220 END REPeat compare
-225 LET p$(p)= comp$
+225 LET p$(p) = comp$
 230 END FOR item
 240 REMark -- vypis setrideneho --
 250 PRINT "setrideno"
-252 file_write$="out"
+252 file_write$ = "out"
 255 OPEN_NEW #7, sorted_file_write$
 260 PRINT "press any key" : PAUSE
 270 FOR cc = 1 TO 243

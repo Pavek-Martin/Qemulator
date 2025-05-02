@@ -1,0 +1,49 @@
+5 REMark aaaa
+7 CLS #1: CLS #0
+20 ted$=DATE$
+35 REMark PRINT ted$
+40 YR=ted$(1 TO 4)
+45 mm$=ted$(6 TO 8)
+50 MN = (mm$ INSTR "..JanFebMarAprMayJunJulAugSepOctNovDec")/3
+55 DD = ted$(10 TO 11)
+70 DIM MD(13)
+75 MD(0) = 0
+80 MD(1) = 31
+90 MD(2) = 28
+100 MD(3) = 31
+110 MD(4) = 30
+120 MD(5) = 31
+130 MD(6) = 30
+140 MD(7) = 31
+150 MD(8) = 31
+160 MD(9) = 30
+170 MD(10) = 31
+180 MD(11) = 30
+190 MD(12) = 31
+210 IF (YR MOD 4 = 0) AND ((YR MOD 100 <> 0) OR (YR MOD 400 = 0)) THEN MD(2) = 29
+220 LET SUMA = 0
+230 FOR I = 0 TO MN - 1
+240 LET SUMA = SUMA + MD(I)
+250 NEXT I
+260 LET SUMA = SUMA + DD
+270 PRINT #0; "Cislo dne v roce: "; SUMA
+275 den$ = SUMA
+280 file$ = "HeslaDen_" & den$
+285 PRINT #0; "ukadam do souboru flp1_" & file$
+330 OPEN_NEW #7, file$
+340 FOR bb = 1 TO 20
+350 z$=""
+360 FOR aa = 1 TO 42
+370 v = RND (1 TO 3) : REMark volba 0-9, A-Z, a-z
+380 IF v = 1 THEN x = RND (48 TO 57) : REMark 0-9
+390 IF v = 2 THEN x = RND (65 TO 90) : REMark A-Z
+400 IF v = 3 THEN x = RND (97 TO 122) : REMark a-z
+410 z$ = z$ & CHR$(x)
+420 NEXT aa
+430 PRINT z$
+440 PRINT #7, z$
+450 NEXT bb
+460 CLOSE #7
+998 STOP
+999 s$="RndHesla_2"
+1000 SAVE s$

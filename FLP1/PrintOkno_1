@@ -1,0 +1,9 @@
+5 REMark PrintOkno_1
+7 CLS#0:CLS#1:CLS#2
+9 LIST#0:LIST#1:LIST#2
+10 PRINT #0; "zde je nula"
+15 PRINT #1; "zde je jedna"
+20 PRINT #2; "zde je dva"
+998 STOP
+999 s$="PrintOkno_1"
+1000 SAVE s$

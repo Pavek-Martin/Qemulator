@@ -1,4 +1,5 @@
-91 CLS #2:CLS #1 :LIST
+5 REMark DexCas_modify_1
+91 CLS #2:CLS #1
 98 REMark DexCas_1
 100 REMark BST change for BOOT program
 110 REMark adjust day/month language for your system
@@ -24,3 +25,6 @@
 290 PRINT "zde"
 300 PRINT DATE$
 310 REMark aaa
+998 STOP
+999 s$="DexCas_modify_1"
+1000 SAVE s$

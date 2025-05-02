@@ -1,36 +1,41 @@
 5 REMark MagicSnake_2
-100 PAPER 0
-110 BORDER 1,7
-120 CLS
-125 LET up = 50
-127 LET kroku=0
-130 REPeat snake
-140 LET direction=RND(1 TO 4)
-145 LET color=RND(2 TO 7)
-150 LET growth=RND(2 TO 20)
-160 INK color
-170 FOR unit = 1 TO growth
-180 SELect ON direction
-190 ON direction = 1
-200 LET up = up + 1
-210 ON direction = 2
-220 LET across = across + 1
-230 ON direction = 3
-240 LET up = up - 1
-250 ON direction = 4
-260 LET across = across - 1
-270 END SELect 
-271 REMark ^^^ asi jako SWITCH
-280 REMark IF across<1 OR across>99 OR up<1 OR up>99 THEN EXIT snake
-281 IF across<1 THEN across=99
-282 IF across>99 THEN across=1
-283 IF up<1 THEN up=99
-284 IF up>99 THEN up=1
+10 CLS#0: CLS#1 : CLS#2
+15 PRINT #0; "Magic Snake"
+20 PAPER 0
+30 LET across = 0
+40 CLS
+50 LET up = 50
+60 LET kroku=0
+70 REPeat snake
+80 LET direction=RND(1 TO 4)
+90 LET color=RND(2 TO 7)
+100 LET growth=RND(2 TO 20)
+110 INK color
+120 FOR unit = 1 TO growth
+130 SELect ON direction
+140 ON direction = 1
+150 LET up = up + 1
+160 ON direction = 2
+170 LET across = across + 1
+180 ON direction = 3
+190 LET up = up - 1
+200 ON direction = 4
+210 LET across = across - 1
+220 END SELect 
+230 REMark ^^^ asi jako SWITCH
+240 REMark IF across<1 OR across>99 OR up<1 OR up>99 THEN EXIT snake
+250 IF across<1 THEN across=99
+260 IF across>99 THEN across=1
+270 IF up<1 THEN up=99
+280 IF up>99 THEN up=1
 290 POINT across,up
-294 LET kroku=kroku+1
-295 REMark kroku++
-300 END FOR unit
-310 END REPeat snake
-320 PRINT "zde"
-500 PRINT kroku
-510 REMark ctrl+c = break a pak goto 500
+300 LET kroku=kroku+1
+310 REMark kroku++
+320 END FOR unit
+330 END REPeat snake
+340 PRINT "zde"
+350 PRINT kroku
+360 REMark ctrl+c = break a pak goto 500
+998 STOP
+999 s$="MagicSnake_2"
+1000 SAVE s$

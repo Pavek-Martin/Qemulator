@@ -1,0 +1,14 @@
+5 REMark ascii_2
+20 CLS : CLS #0
+25 OPEN_NEW #7, ascii_tabulka
+30 LET p=0
+40 FOR aa = 0 TO 193
+50 PRINT aa;" ";CHR$(aa)
+55 PRINT #7, aa;" ";CHR$(aa)
+60 LET p=p+1
+70 REMark IF p > 10 THEN PRINT "pause" : PAUSE : LET p=0
+80 NEXT aa
+85 CLOSE #7
+998 STOP
+999 s$="ascii_2"
+1000 SAVE s$
