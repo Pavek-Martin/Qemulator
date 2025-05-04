@@ -6,7 +6,7 @@
 45 REMark PRINT rr$
 47 R = rr$
 49 REMark prevede rr$ na R (int),funguje !
-50 R = 2026 : REMark testovaci radek
+50 REMark R = 2026 : REMark testovaci radek rok
 52 REMark PRINT R
 55 DIM T(12)
 57 REMark sakamoto algoritmus
@@ -64,7 +64,7 @@
 465 PRINT suma & "< cislo dne ted"
 470 REMark -- urci usek roku --
 472 REMark usek = 0 : rem testovaci radek
-473 suma = 33 : hh = 1 : REMark testovaci radek
+473 REMark suma = 33 : hh = 1 : REMark testovaci radek
 475 IF suma < SUMB THEN usek = 1 : PRINT "usek 1-A"
 480 IF suma = SUMB AND hh < 2 THEN usek = 1 : PRINT "usek 1-B"
 485 IF suma = SUMB AND hh >= 2 THEN usek = 2 : PRINT "usek 2-A"
@@ -95,13 +95,13 @@
 590 cas_minus_h = 0 : REMark cas minus hodina
 595 IF hist_usek = 1 AND usek = 2 THEN wh = 1 : cas_plus_h = 1 : PRINT "1-2"
 600 IF hist_usek = 2 AND usek = 1 THEN wh = 1 : cas_minus_h = 1 : PRINT "2-1"
-605 IF hist_usek = 2 AND usek = 3 THEN wh = 1 : cas_minus_h = 1 : PRINT "2-3"
+603 IF hist_usek = 2 AND usek = 3 THEN wh = 1 : cas_minus_h = 1 : PRINT "2-3"
+605 REMark tady je ochrana proti opakovanymu odecteni hodiny (radek 607)
+606 REMark pokud by se program do jedny hodiny pustil znova
 607 IF hist_usek = 3 AND usek = 2 AND hist_suma <> suma THEN wh = 1 : cas_minus_h = 1 : PRINT "3-2"
-609 REMark oprava 4.5.2025 - nastal novy rok (goto 96)
-611 REMark zapise do historie ze je novy roka  to je  vse
+610 REMark oprava 4.5.2025 pridan radek 613 - pokud by nastal novy rok ( 595 IF... )
+611 REMark zapise do historie ze je novy rok, nebo usek roku je opet 1 a ceka na konec brezna
 613 IF hist_usek = 3 AND usek = 1 THEN wh = 1 : PRINT "nastal novy rok " & R
-615 REMark tady je ochrana proti opakovanymu odecteni hodiny
-620 REMark poku by se program do jedny hodiny pustil znova
 625 REMark zapis historie a posun casu samotny
 630 REMark PRINT ""
 635 PRINT "zapsat novou historii = " & wh
