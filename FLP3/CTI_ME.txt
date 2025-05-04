@@ -42,6 +42,8 @@ jeste druha vec u ktere jsem nevedel a nepodarilo se mi ji vyresit
 bylo jak zakazat potvrzeni o prepasni souboru historie, kdy se program 
 dozadoval toho aby uzivatel potvrdil opetovni zapis do souboru, proste
 je tam nutny zmackout "Y" a bez roho to asi nepujde, nevim
-
 1.5.2025
+
+
+
 
