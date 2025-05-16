@@ -88,8 +88,20 @@
 670 CLOSE #7
 673 PRINT ""
 675 PRINT "byla zapsan novy soubor historie"
-680 PRINT "nyni spust program " & '"ZmenaCas"'
+680 PRINT "nyni spust program " & '"lrun flp3_ZmenaCas"'
+685 PRINT "prikazem goto 1010"
+690 LIST #2
 997 STOP
 998 REMark goto 999 = save file
 999 s$="flp3_CreateHistFile"
 1000 SAVE s$
+1001 STOP
+1010 load$ = "flp3_ZmenaCas"
+1011 LRUN load$
+1012 REMark programy se muzou poustet na vzajem mezi sebou :)
+1013 REMark jeden se dokonci a na konci zavola lrun load$
+1014 REMark a prvni muze poustet druhej a druhej zase prvni v cyklu
+1015 REMark nebo muze bejt vice radku lrun load_A$ ; lrun load_B$
+1016 REMark a nacteni jednoho konkretniho podmineny funkci ( if == neco )
+1017 REMark  atd. atd. atd. :)
+1050 STOP

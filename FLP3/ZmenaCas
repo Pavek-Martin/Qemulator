@@ -14,9 +14,9 @@
 70 T(7)=5: T(8)=1: T(9)=4: T(10)=6: T(11)=2: T(12)=4
 72 REMark dny v mesici
 74 DIM MD(13)
-76 MD(0)=0: MD(1)=31: MD(2)=99: MD(3)=31: MD(4)=30: MD(5)=31: MD(6)=30
+76 MD(0)=0: MD(1)=31: MD(2)=28: MD(3)=31: MD(4)=30: MD(5)=31: MD(6)=30
 77 MD(7)=31: MD(8)=31: MD(9)=30: MD(10)=31: MD(11)=30: MD(12)=31
-79 IF (R MOD 4 = 0) AND ((R MOD 100 <> 0) OR (R MOD 400 = 0)) THEN MD(2) = 29 : ELSE MD(2)=28
+79 IF (R MOD 4 = 0) AND ((R MOD 100 <> 0) OR (R MOD 400 = 0)) THEN MD(2) = 29
 82 REMark vypocet pro brezen (M=3)
 90 M = 3
 101 D = MD(M)
@@ -80,15 +80,15 @@
 528 REMark PRINT '"' & fh$ & '"'
 529 PRINT "pokud ted program skonci chybou: At line 540 not found"
 532 PRINT "spuste napred soubor " & '"CreareHistFile"'
-533 REMark PRINT "a pak spuste tento program znova"
+533 PRINT "prikazem goto 1010"
 535 REMark fh$=file historie
 540 OPEN_IN #6, fh$
 542 PRINT "nacteno z historie:"
 545 INPUT #6, hist_usek
 550 INPUT #6, hist_suma
 555 CLOSE #6
-560 PRINT "hist_usek = " & hist_usek
-570 PRINT "hist_suma = " & hist_suma
+560 PRINT "hist_usek = " & hist_usek & "; hist_suma = " & hist_suma
+570 REMark PRINT "hist_suma = " & hist_suma
 575 REMark porovnani histori vs aktualni data
 580 wh = 0 : REMark write history
 585 cas_plus_h = 0 : REMark cas plus hodina
@@ -116,7 +116,12 @@
 680 IF cas_plus_h = 1 THEN ADATE +3600 : PRINT "CAS UPRAVEN NA: " & DATE$
 685 IF cas_minus_h = 1 THEN ADATE -3600 : PRINT "CAS UPRAVEN NA:" & DATE$
 690 IF wh = 0 THEN PRINT "CAS JE BEZE ZMEN"
+994 LIST #2
 996 REMark PRINT "radek 473 test !"
 997 STOP
 999 s$="FLP3_ZmenaCas"
 1000 SAVE s$
+1001 STOP
+1010 l$="flp3_CreateHistFile"
+1011 LRUN l$
+1012 STOP

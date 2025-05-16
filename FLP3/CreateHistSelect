@@ -27,8 +27,14 @@
 190 CLOSE #6
 195 PRINT "hist_usek = " & hist_usek
 200 PRINT "hist_suma = " & hist_suma
-205 PRINT "nyni spust program " & '"ZmenaCas_2"'
+205 PRINT "nyni spust program " & '"ZmenaCas"'
+210 PRINT "prikazem goto 1010"
+220 LIST #2
 997 REMark goto 999 = save file
 998 STOP
 999 s$ = "flp3_CreateHistSelect"
 1000 SAVE s$
+1001 STOP
+1010 l$="flp3_ZmenaCas"
+1011 LRUN l$
+1012 STOP
